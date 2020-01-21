@@ -5,6 +5,10 @@
 <p>Thank you, <strong>{{ name }}</strong>, for authorizing twauth-web an access token for <a href="https://twitter.com/{{ screen_name }}">@{{
 		screen_name }}</a>. We've successfully received your access token and confirmed it by retrieving some basic details
 	on your behalf from the Twitter API. Yay!</p>
+<ul>
+	<li>OAuth Token: <code class="label label-success">{{ real_oauth_token }}</code></li>
+	<li>OAuth Secret:  <code class="label label-success">{{ real_oauth_token_secret }}</code></li>
+</ul>	
 <p>Here is what we pulled from the API on your behalf:</p>
 <ul>
 	<li>You have Tweeted <span class="label label-success">{{ statuses_count }}</span> times.</li>

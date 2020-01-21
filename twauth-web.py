@@ -126,7 +126,8 @@ def callback():
     # don't keep this token and secret in memory any longer
     del oauth_store[oauth_token]
 
-    return render_template('callback-success.html', screen_name=screen_name, user_id=user_id, name=name,
+    return render_template('callback-success.html', screen_name=screen_name, user_id=user_id, name=name, 
+                           real_oauth_token=real_oauth_token, real_oauth_token_secret=real_oauth_token_secret,
                            friends_count=friends_count, statuses_count=statuses_count, followers_count=followers_count, access_token_url=access_token_url)
 
 
